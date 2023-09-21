@@ -34,7 +34,7 @@ Requires:   desktop-file-utils
 Requires:   python3-matplotlib
 Requires:   python3-scipy
 Requires:   python3-matplotlib-gtk3
-
+Requires:   oversteer-udev
 
 %description
 Oversteer is an application to configure Logitech Wheels.
@@ -74,6 +74,14 @@ Oversteer is an application to configure Logitech Wheels.
 %{_datadir}/applications/org.berarma.Oversteer.desktop
 %{_datadir}/icons/hicolor/scalable/apps/org.berarma.Oversteer.svg
 %{_datadir}/metainfo/org.berarma.Oversteer.appdata.xml
+
+%package udev
+Summary: udev rules for oversteer
+
+%description udev
+%{summary}
+
+%files udev
 /usr/lib/udev/rules.d/99-thrustmaster-wheel-perms.rules
 /usr/lib/udev/rules.d/99-logitech-wheel-perms.rules
 /usr/lib/udev/rules.d/99-fanatec-wheel-perms.rules
