@@ -34,6 +34,7 @@ Requires:   desktop-file-utils
 Requires:   python3-matplotlib
 Requires:   python3-scipy
 Requires:   python3-matplotlib-gtk3
+Requires:   librsvg2
 Requires:   oversteer-udev
 
 %description
