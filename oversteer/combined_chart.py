@@ -1,4 +1,6 @@
 from locale import gettext as _
+import matplotlib
+matplotlib.use("Gtk3Cairo")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_gtk3cairo import FigureCanvasGTK3Cairo as FigureCanvas
 from matplotlib.backends.backend_gtk3 import NavigationToolbar2GTK3 as NavigationToolbar
@@ -84,8 +86,8 @@ class CombinedChart:
 
         return canvas
 
-    def get_navigation_toolbar(self, canvas, window):
-        return NavigationToolbar(canvas, window)
+    def get_navigation_toolbar(self, canvas):
+        return NavigationToolbar(canvas)
 
     def align_yaxis(self, ax1, v1, ax2, v2):
         """adjust ax2 ylimit so that v2 in ax2 is aligned to v1 in ax1"""
